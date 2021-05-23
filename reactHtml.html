@@ -10,7 +10,7 @@
 
 <body>
     <div id="root">
-<!-- Test project -->
+        <!-- Test project -->
         <!-- <ul>
             <li>75 g oats</li>
             <li>150 g frozen berries</li>
@@ -21,15 +21,19 @@
 
     </div>
 
+
+    <!-- // necessary libaries  -->
     <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
 
     <script>
+        //Pure javascript
+
         console.log(React.createElement("h1", {
                 id: "recipe-0"
             },
             "Baked Salmon"
-            )); //create an h1 element with id recipe-0, element's children (any nodes that are inserted between the opening and closing tag - in this case - some text)
+        )); //create an h1 element with id recipe-0, element's children (any nodes that are inserted between the opening and closing tag - in this case - some text)
         // after console login this element - this is the structure of the React element:
         // {
         //     $$typeof: Symbol(react.element)
@@ -60,8 +64,8 @@
         console.log(list);
 
 
-//Pure react. A react app is a tree of React elements all stemming from a single root element. React elements are the instructions
-//React will use to build a UI in the browser.
+        //Pure react. A react app is a tree of React elements all stemming from a single root element. React elements are the instructions
+        //React will use to build a UI in the browser.
         const awesomeOats = React.createElement(
             "section", {
                 id: "maarja-oats"
@@ -91,29 +95,29 @@
                 React.createElement("p", null, "Enjoy!")
             )
         );
-       // ReactDOM.render(awesomeOats, document.getElementById("root"))
+        // ReactDOM.render(awesomeOats, document.getElementById("root"))
 
-       //This can be stored in a JS array;
-       const foodItems = [
-       "75 g oats",
-       "150 g frozen berries",
-       "8g oliv oil",
-       "2 large eggs",
-       "pinch of salt"
-       ];
-       
-       // This syntax creates a React element for each ingredient in the array. each string is displayed in the list item's children as text.
-       //The value for each ingredient is displayed as the list item.
-       //each of the elements have a key property (key:i)
-       ReactDOM.render((React.createElement(
-           "ul",
-           {className: "ingredients"},
-           foodItems.map((ingredient, i) =>
-            React.createElement("li", {key: i}, ingredient))
-       )), document.getElementById("root"))
+        //This can be stored in a JS array;
+        const foodItems = [
+            "75 g oats",
+            "150 g frozen berries",
+            "8g oliv oil",
+            "2 large eggs",
+            "pinch of salt"
+        ];
 
-
-
+        // This syntax creates a React element for each ingredient in the array. each string is displayed in the list item's children as text.
+        //The value for each ingredient is displayed as the list item.
+        //each of the elements have a key property (key:i)
+        ReactDOM.render((React.createElement(
+            "ul", {
+                className: "ingredients"
+            },
+            foodItems.map((ingredient, i) =>
+                React.createElement("li", {
+                    key: i
+                }, ingredient))
+        )), document.getElementById("root"))
     </script>
 
 
