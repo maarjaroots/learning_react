@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Samples</title>
+</head>
+
+<body>
+    <div id="root">
+
+
+    </div>
+
+
+    <!-- // necessary libaries  -->
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+
+    <script>
+        //Pure javascript
+
+
+        // function IngredientsList() {
+        //     return React.createElement(
+        //         "ul", {
+        //             className: "ingredients"
+        //         },
+        //         React.createElement("li", null, "75 g oats"),
+        //         React.createElement("li", null, "150 g frozen berries"),
+        //         React.createElement("li", null, "8g oliv oil"),
+        //         React.createElement("li", null, "2 large eggs"),
+        //         React.createElement("li", null, "pinch of salt")
+        //     )
+        // }
+        // ReactDOM.render(
+        //     React.createElement(IngredientsList, null, null), document.getElementById("root")
+        // );
+
+        const foodItems = [
+            "75 g oats",
+            "150 g frozen berries",
+            "8g oliv oil",
+            "2 large eggs",
+            "pinch of salt"
+        ];
+
+        function IncredientList({ items }) {  //passing in props
+            return React.createElement(
+                "ul", {
+                    className: "ingredients"
+                },
+                items.map((ingredient, i) =>
+                    React.createElement("li", {
+                        key: i
+                    }, ingredient)
+                )
+            );
+        }
+        ReactDOM.render(
+            React.createElement(IncredientList, {
+                items: foodItems
+            }, null),
+            document.getElementById("root")
+        );
+
+
+/// 2013, only one way how to create a component: createClass
+        const ItemsList = React.createClass({
+            displayName: "ItemsList",
+            render() {
+                return React.createElement(
+                    "ul",
+                    {className: "ingredients"},
+                    this.props.items.map((ingredient, i) =>
+                    React.createElement("li", {key: i}, ingredient)
+                ))
+            }
+        });
+
+
+
+/// with ES2015, React.Component API allowed to use class syntax to create a new component instance
+///Another old friend who shaped you but who you won't see as often because they moved away and you move on
+/// From now one  we will use functions to create components
+        class IngredientsListFull extends React.Component {
+            render() {
+                return React.createElement(
+                    "ul",
+                    {className: ingredients},
+                    this.props.items.map((ingredient, i) =>
+                    React.createElement("li", {key:i}, ingredient))
+                )
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>
