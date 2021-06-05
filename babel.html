@@ -77,9 +77,11 @@ function Recipe ({name, ingredients, steps}) {
                 </ul>
                 <section className='instructions'>
                     <h2>Cooking Instructions</h2>
+                    <ol>
                     {steps.map((step,i) => (
-                        <p key ={i}>{step}</p>
+                        <li key ={i}>{step}</li>
                     ))}
+                    </ol>
             </section>
             </section>
     )
@@ -114,7 +116,7 @@ function Recipe ({name, ingredients, steps}) {
 //     )
 // }
 
-// syntax improvemnt for Menu, no longer need to use props
+// syntax improvemnt for Menu, no longer need to use props, using object destructing
 function Menu({title, recipes}) {
     return(
         <article>

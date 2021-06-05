@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babel</title>
+</head>
+
+<body>
+    <div id="root">
+
+
+    </div>
+
+
+    <!-- // necessary libaries  -->
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js" crossorigin></script>
+
+    <script type="text/babel">
+        // Babel compiles source code (ES6) into something that the browser can read (ES5)
+    //JSX - JavaScript XML, allows us to write HTML in React, gets transforemd into JS
+
+    
+    //React will not render two or more adjacent or sibling elements as a component,
+    //so we used to have to wrap these in an enclosing tag like div
+    //this led to a lot of unnecessary tags being created, and a bunch of wrappers withouth much purpose
+    //React.fragment, we can mimic the behavior of a wrapper withouth actually creating a new tag
+function Cat({ name }) {
+    return (
+        // <React.Fragment>   <> short for fragment
+            <>  
+        <h1>The cat's name is {name}</h1>
+        <p>He is good.</p>
+        </>
+        // </React.Fragment>
+    ) 
+}
+
+    
+    ReactDOM.render(
+        <Cat name="Jungle"/>,
+        document.getElementById('root')
+    )
+
+    </script>
+
+
+</body>
+
+</html>
