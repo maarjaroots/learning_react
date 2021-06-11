@@ -1,0 +1,40 @@
+[
+    {
+      "name": "Mega oats",
+      "ingredients": [
+        { "name": "oats", "amount": 75, "measurment": "1 gramm" },
+        { "name": "frozen berries", "amount": 150, "measurment": "1 gramm" },
+        { "name": "egg", "amount": 2, "measurment": "piece" },
+        { "name": "olive oil", "amount": 8, "measurment": "1 gramm" },
+        { "name": "salt", "amount": 2, "measurment": "pinch" }
+      ],
+      "steps": [
+        "Add the oats in the pot and add some water",
+        "Put it on the oven, let it boil for 2 mins",
+        "Add the eggs and salt. Stir it!",
+        "Let it rest for 5 mins.",
+        "Put the frozen fruit in a bowl",
+        "Pour the porrige over the fruits and add the oil",
+        "Enjoy!"
+      ]
+    },
+    {
+      "name": "Boiled eggs",
+      "ingredients": [
+        { "name": "egg", "amount": 2, "measurment": "piece" },
+        { "name": "olive oil", "amount": 8, "measurment": "1 gramm" },
+        { "name": "salt", "amount": 2, "measurment": "pinch" }
+      ],
+      "steps": [
+        "Boil some water",
+        "Put the eggs into the water",
+        "Boil 9 mins",
+        "Put it into cold water for 10 mins",
+        "Peel the eggs",
+        "Smash the eggs with a fork",
+        "Add salt and oliv oil",
+        "Enjoy!"
+      ]
+    }
+  ]
+  
