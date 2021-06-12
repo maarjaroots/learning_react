@@ -1,0 +1,7 @@
+Webpack budles our source code into a single file.
+
+index.js imports React, ReactDOM, and the Menu.js file. This is what we want to run in our browswer first
+Where ever webpack finds an import statment, finds the assosiated module and includes it in the bundle
+Menus.js -> Recipe.js -> Instructions.js and IngredientList.js -> Ingredient.js. 
+Webpack will follow this import tree and include all of the necessary modules in our bundle. 
+As webpack build the bundle, tell it to transform JSX into React elements
