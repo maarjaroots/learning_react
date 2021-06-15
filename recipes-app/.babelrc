@@ -1,0 +1,5 @@
+{
+    "presets" : ["@babel/preset-env", "@babel/preset-react"]
+}
+
+//babel will transform code into syntax that the browser understands

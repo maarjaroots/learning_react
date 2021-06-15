@@ -27,4 +27,3 @@ export default function Recipe({ name, ingredients, steps }) {
     </section>
   );
 }
-export default Recipe;
