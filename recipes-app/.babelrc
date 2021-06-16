@@ -3,3 +3,4 @@
 }
 
 //babel will transform code into syntax that the browser understands
+//manual configuration of Babel

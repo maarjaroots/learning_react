@@ -1,5 +1,7 @@
 var path = require("path");
 
+//manual configuration of webpack
+
 module.exports = {
     entry: "./src/index.js",  //entry file
 
@@ -15,5 +17,5 @@ module.exports = {
     },
 
     // source map is a file that maps bundle to the original source files
-    //devtool: "#source-map"
+    devtool: "source-map"
 };
